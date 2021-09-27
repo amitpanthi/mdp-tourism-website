@@ -65,4 +65,14 @@ export default class HelloWorld extends Vue {
             }
         }
     }
+
+    @media screen and (max-width: 480px) {
+        #nav-links a{
+            font-size: 10px !important;
+        }        
+
+        .logo{
+            max-width: 80%;
+        }
+    }
 </style>

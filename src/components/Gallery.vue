@@ -7,54 +7,22 @@
         </div>
         <div class="gallery-content">
             <div class="gallery-row">
-                <div class="gallery-item">
+                <div class="gallery-item" v-for="item in gallery_items_r1" v-bind:key="item">
                     <div class="image">
-                        <img class="gallery-img" src="../assets/images/gallery/gallery-1.jpg" alt="Outdoor Pursuits">
+                        <img class="gallery-img" v-bind:src="item.img_src" v-bind:alt=item.caption>
                     </div>
                     <div class="image-title">
-                        <p class="img-title-text">Outdoor Pursuits</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="image">
-                        <img class="gallery-img" src="../assets/images/gallery/gallery-2.jpg" alt="Golf">
-                    </div>
-                    <div class="image-title">
-                        <p class="img-title-text">Golf</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="image">
-                        <img class="gallery-img" src="../assets/images/gallery/gallery-3.jpeg" alt="Lifestyle">
-                    </div>
-                    <div class="image-title">
-                        <p class="img-title-text">Lifestyle</p>
+                        <p class="img-title-text"> {{ item.caption }} </p>
                     </div>
                 </div>
             </div>
             <div class="gallery-row">
-                <div class="gallery-item">
+                <div class="gallery-item" v-for="item in gallery_items_r2" v-bind:key="item">
                     <div class="image">
-                        <img class="gallery-img" src="../assets/images/gallery/gallery-4.jpg" alt="Landscapes">
+                        <img class="gallery-img" v-bind:src="item.img_src" v-bind:alt=item.caption>
                     </div>
                     <div class="image-title">
-                        <p class="img-title-text">Landscapes</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="image">
-                        <img class="gallery-img" src="../assets/images/gallery/gallery-5.jpg" alt="Clubhouses">
-                    </div>
-                    <div class="image-title">
-                        <p class="img-title-text">Clubhouses</p>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <div class="image">
-                        <img class="gallery-img" src="../assets/images/gallery/gallery-6.jpg" alt="Wellness">
-                    </div>
-                    <div class="image-title">
-                        <p class="img-title-text">Wellness</p>
+                        <p class="img-title-text"> {{ item.caption }} </p>
                     </div>
                 </div>
             </div>
@@ -76,7 +44,41 @@ import { Options, Vue } from 'vue-class-component';
 },
 })
 
-export default class Home extends Vue {}
+export default class Home extends Vue {
+    data(): any{
+        return{
+            gallery_items_r1: [
+            {
+                img_src: require('../assets/images/gallery/gallery-1.jpg'),
+                caption: 'Outdoor Pursuits'
+            },
+            {
+                img_src: require('../assets/images/gallery/gallery-2.jpg'),
+                caption: 'Golf'
+            },
+            {
+                img_src: require('../assets/images/gallery/gallery-3.jpeg'),
+                caption: 'Lifestyle'
+            },
+        ],
+
+        gallery_items_r2: [
+            {
+                img_src: require('../assets/images/gallery/gallery-4.jpg'),
+                caption: 'Landscapes'
+            },
+            {
+                img_src: require('../assets/images/gallery/gallery-5.jpg'),
+                caption: 'Clubhouses'
+            },
+            {
+                img_src: require('../assets/images/gallery/gallery-6.jpg'),
+                caption: 'Wellness'
+            },
+        ]
+        }
+    }
+}
 </script>
 
 <style lang="scss" scoped>
