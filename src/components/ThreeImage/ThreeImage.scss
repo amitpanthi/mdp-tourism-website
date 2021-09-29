@@ -1,0 +1,34 @@
+.tim-container{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}
+
+.tim-item{
+    width: 33.33%;
+    height: 100vh;
+    background-position: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+}
+
+.ti1{
+    background-image: url(../../assets/images/home/im-4.jpg);
+}
+
+.ti2{
+    background-image: url(../../assets/images/home/im-5.jpg);
+}
+
+.ti3{
+    background-image: url(../../assets/images/home/im-6.jpg);
+}
+
+.tim-header{
+    font-size: 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}

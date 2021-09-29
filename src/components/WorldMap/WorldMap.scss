@@ -1,0 +1,151 @@
+@import "../../assets/_global-styles.scss";
+
+.worlds-container{
+    background: #f3f3f3;
+    padding-bottom: 10%;
+    background-image: url(../../assets/images/home/globe-usa.jpg);
+    background-position: left bottom;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-blend-mode: normal;
+}
+
+.worlds-content{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+                "dh ."
+                ". ld";
+}
+
+.description{
+    grid-area: dh;
+    // background: #fff;
+}
+
+.location-details{
+    grid-area: ld;
+    padding-top: 3rem;
+    background: #161F1E;
+}
+
+.dh1{
+    font-family: $galleryFont;
+    font-weight: 300;
+    font-size: 3.0rem;
+}
+
+.dh2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 2.5rem;
+}
+
+.dh1, .dh2{
+    margin: 0px;
+    text-align: left;
+    letter-spacing: 0.1rem;
+}
+
+.description-header, .description{
+    padding-left: 10%
+}
+
+.description{
+    padding-top: 2rem;
+    font-family: $defaultFont;
+    padding-right: 18%;
+    text-align: left;
+}
+
+.loc-link{
+    display: inline;
+    width: 10rem;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.loc-contents{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+                    "r1 img"
+                    "r2 img"
+                    "r3 img"
+                    "r4 img"
+                    "r5 img";
+}
+
+.loc-r1{
+    grid-area: r1;
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+    padding-left: 9%;
+}
+
+.loc-r2{
+    grid-area: r2;
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%
+}
+
+.loc-r3{
+    grid-area: r3;
+    row-gap: 0px;
+    .loc-main{
+        margin-bottom: 0;
+        font-family: $defaultFont;
+        font-weight: 300;
+        color: #717776;
+        text-align: left;
+        padding-left: 13%;
+    }
+
+}
+
+.loc-r4{
+    grid-area: r4;
+
+    .loc-name{
+        margin-top: 0;
+        font-family: $galleryFont;
+        color: #FFF;
+        text-align:left;
+        padding-left: 13%;
+        font-size: 2.5rem;
+    }
+}
+
+.loc-r5{
+    grid-area: r5;
+
+    .coords{
+        font-family: $defaultFont;
+        font-weight: 300;
+        color: #717776;
+        text-align: left;
+        padding-left: 13%;
+        padding-bottom: 0%;
+    }
+}
+
+.loc-c2{
+    grid-area: img;
+    
+    img{
+        width: 90%;
+        object-fit: cover;
+        padding-bottom: 10%;
+        margin: -25%;
+    }
+}
+
+

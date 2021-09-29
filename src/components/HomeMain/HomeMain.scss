@@ -1,0 +1,35 @@
+@import "../../assets/_global-styles.scss";
+
+.home-entry-container{
+    width: 100vw;
+    height: 100vh;
+}
+
+video{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.home-title1{
+    font-size: 5rem;
+    font-family: $galleryFont;
+    color: #fff;
+    padding-top: 13%;
+}
+
+.home-title2{
+    font-size: 5rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+.home-title1, .home-title2{
+    text-align: left;
+    padding-left: 30%;
+    margin: 0;
+}

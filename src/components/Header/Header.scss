@@ -1,0 +1,49 @@
+@import "../../assets/_global-styles.scss";
+
+.logo{
+    justify-self: flex-start;
+    max-width: 40%;
+    height: auto;
+}
+
+#header{
+    display: flex;
+    justify-content: center;
+}
+
+#nav{
+    padding-top: 3%;
+    width: 90%;
+    
+    @include createFlex(row);
+
+    #nav-logo{
+        flex: 1;
+        @include createFlex(row);
+        justify-content: flex-start;
+        
+    }
+
+    #nav-links{
+        @include createFlex(row);
+        flex: 2;
+
+        a {
+            flex: 1;
+            text-decoration: none;
+            font-family: $defaultFont;
+            font-size: 1rem;
+            color: #fff;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #nav-links a{
+        font-size: 10px !important;
+    }        
+
+    .logo{
+        max-width: 80%;
+    }
+}

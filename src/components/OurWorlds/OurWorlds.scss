@@ -1,0 +1,46 @@
+@import "../../assets/_global-styles.scss";
+
+.gallery-header{
+    margin-bottom: 10%;
+}
+
+.worlds-gallery{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    padding-right: 3%;
+}
+
+.worlds-item{
+    flex:1;
+    margin-bottom: 3%;
+}
+
+.worlds-img{
+    object-fit: cover;
+    width: 90%;
+    // height: 65%;
+    justify-self: flex-start;
+}
+
+.worlds-caption, .worlds-location{
+    margin: 0.5rem;
+    text-align: left;
+    padding-left: 6%;
+    color: #fff;
+}
+
+.worlds-location{
+    color: #616161;
+}
+
+@media screen and (max-width: 480px) {
+    .worlds-gallery{
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(13, 1fr);
+        padding-right: 3%;
+    }
+}
