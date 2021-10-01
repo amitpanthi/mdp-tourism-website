@@ -1,0 +1,31 @@
+@import "../../assets/_global-styles.scss";
+
+.main-container{
+    min-height: 100vh;
+}
+
+.hero-image{
+    @include fixImgWithNav;
+    height: 100vh;
+    // opacity: 0.6;
+}
+
+.home-title1{
+    font-size: 4rem;
+    font-family: $galleryFont;
+    color: #fff;
+    padding-top: 13%;
+}
+
+.home-title2{
+    font-size: 3.75rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    margin-top: -2% !important;
+}
+
+.home-title1, .home-title2{
+    text-align: left;
+    padding-left: 25%;
+    margin: 0;
+}

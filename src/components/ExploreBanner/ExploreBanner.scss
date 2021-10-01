@@ -1,0 +1,28 @@
+@import "../../assets/_global-styles.scss";
+
+.banner-content{
+    @include createFlex(column);
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../assets/images/about/im-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    width: 100vw;
+
+    .banner-head{
+        font-family: $Montserrat;
+        font-size: 3rem;
+        color: #fff;
+    }
+}
+
+.explore-cta{
+    width: 10rem;
+    border: 0.5px solid #fff;
+    height: 4rem;
+    font-family: $Montserrat;
+    font-size: 1rem;
+    color: #fff;
+    background: none;
+}

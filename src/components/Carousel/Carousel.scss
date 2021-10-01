@@ -1,0 +1,170 @@
+@import "../../assets/_global-styles.scss";
+
+.carousel{
+    @include createFlex(column);
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f3f3f3;
+    color: black;
+    padding-top: 2%;
+}
+
+.carousel-banner {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;  
+    justify-content: space-between;
+    width: 60% !important;
+    margin-left: auto;
+    margin-right: auto;
+    h3,
+    p {
+      padding-top: 0;
+      margin: 0;
+      line-height: 1.1;
+      letter-spacing: 1px;
+      text-align: left;
+    }
+    .buttons button {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      border: 0;
+      outline: 0;
+      cursor: pointer;
+      background-color: #f3f3f3;
+      color: black;
+      box-shadow: 0 8px 14px 0 rgb(211, 211, 211);
+      font-size: 2rem;
+    }
+
+    .button-pair .first-button {
+        margin-right: 5%;
+    }
+
+    .button-pair button:hover {
+        background-color: black;
+        color: white;
+        transition: background-color 1s ease;
+    }
+}
+
+.image-container {
+  width: 30vw;
+  height: 70vh;
+  margin: 2px -8px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #000;
+    background-blend-mode: darken;
+  }
+}
+
+.img-desc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 2.5rem 3rem;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  
+    .img-title {
+      margin-bottom: 1rem;
+      white-space: normal;
+      color: #fff;
+      font-size: 2rem;
+    }
+    .img-loc {
+      font-size: 14px;
+      line-height: 1.5;
+      white-space: normal;
+      color: #ffffffbf;
+    }
+}
+
+@mixin white-gradient {
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+}
+  
+$animationSpeed: 25s;
+
+// Animation
+@keyframes scroll {
+0% {
+    transform: translateX(0);
+}
+100% {
+    transform: translateX(calc(-250px * 7));
+}
+}
+  
+// Styling
+.slider {
+overflow: hidden;
+display: flex;
+width: 100%;
+
+&::before,
+&::after {
+    @include white-gradient;
+    content: "";
+}
+
+&::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+&::before {
+    left: 0;
+    top: 0;
+}
+
+.slider-track {
+    animation: scroll $animationSpeed linear infinite;
+    width: 60%;
+    margin-right: 2%;
+    cursor: pointer;
+}
+.slider-track:hover{
+    .image-container img{
+        transform: scale(1.1);
+        transition: transform 1s ease;
+    }
+}
+
+.slide {
+    display: flex;
+    flex-direction: row;
+}
+}
+
+.top-heading{
+    font-family: "Spectral", serif;
+    font-weight: 300;
+    font-size: 2.5rem;
+}
+
+.bottom-heading{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 2.25rem;
+    margin-top: -2% !important;
+}
+
+.img-title{
+    font-family: $galleryFont;
+}

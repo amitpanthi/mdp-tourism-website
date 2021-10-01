@@ -10,7 +10,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/test',
     name: 'Test',
-    component: () => import('../components/WorldMap/WorldMap.vue')
+    component: () => import('@/views/CompTest.vue')
   },
   {
     path: '/our-worlds',
@@ -21,6 +21,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/gallery',
     name: 'Gallery',
     component: () => import('../components/Gallery/Gallery.vue')
+  },
+  {
+    path: '/about-dlc',
+    name: 'About DLC',
+    component: () => import('../views/AboutDLC/AboutDLC.vue')
   },
 ]
 
