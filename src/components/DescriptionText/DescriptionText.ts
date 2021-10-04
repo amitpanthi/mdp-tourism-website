@@ -7,6 +7,6 @@ import { Options, Vue } from 'vue-class-component';
         description: String
     }
 })
-export default class Footer extends Vue {
+export default class DescriptionText extends Vue {
     
 }

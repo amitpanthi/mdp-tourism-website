@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Home from '../views/Home.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -26,6 +25,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/about-dlc',
     name: 'About DLC',
     component: () => import('../views/AboutDLC/AboutDLC.vue')
+  },
+  {
+    path: '/experiences',
+    name: 'Experiences',
+    component: () => import('../views/Experiences/Experiences.vue')
   },
 ]
 
