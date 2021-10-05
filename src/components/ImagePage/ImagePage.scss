@@ -1,0 +1,90 @@
+@import "../../assets/_global-styles.scss";
+
+.news-page-container{
+    background-color: #f3f3f3;
+    @include createFlex(column);
+
+    .news-intro{
+        font-family: $galleryFont;
+        font-size: 2.5rem;
+        text-align: left;
+        margin-left: 10%;
+        margin-bottom: -1%;
+    }
+}
+
+.n-overlap-container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: #f3f3f3;
+    padding-top: 5%;
+}
+
+.n-ov-image-container{
+    grid-column: 2/ span 8;
+    grid-row: 1;
+    z-index: 2;
+    margin-bottom: 10%;
+
+
+    img{
+        width: 75vw;
+        height: 100vh;
+        position:relative;
+        z-index:2;
+    }
+}
+
+.n-description-box{
+    background-color: white;
+    grid-column: 8/ span 4;
+    grid-row: 1;
+    z-index: 6;
+    width: 25vw;
+    height: 65vh;
+    margin-top: 20%;
+    padding: 5% 10%;
+    text-align: left;
+
+    .n-d-title{
+        font-family: $galleryFont;
+        padding-top: 0;
+        padding-bottom: 1rem;
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    .n-image-desc{
+        font-family: $Montserrat;
+        padding-bottom: 1.5rem;
+        font-size: 1rem;
+    }    
+
+    button{
+        border: 1.5px solid grey;
+        background: none;
+        font-family: $Montserrat;
+        color: black;
+        padding: 5% 12.5%
+    }
+}
+
+.news-nav{
+    @include createFlex(row);
+    justify-content: center;
+    align-items: center;
+    padding-top: 3%;
+
+    p{
+        padding: 0 2%;
+    }
+
+    svg{
+        cursor: pointer;
+    }
+
+    padding-bottom: 5%;
+}

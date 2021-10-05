@@ -8,6 +8,8 @@
     <Carousel />
     <OverlappingImages v-bind:bgImage='imag' v-bind:dTitle='dtitle' v-bind:desc='desc' v-bind:buttonText='explore' v-bind:gradient="gradient"/>
     <OverlappingImagesL v-bind:bgImage='imag' v-bind:dTitle='dtitle' v-bind:desc='desc' v-bind:buttonText='explore' v-bind:gradient="gradient"/>
+    <ImagePage v-bind:bgImage="imag" v-bind:dTitle="dtitle" v-bind:desc="desc" v-bind:buttonText="explore" />
+    <NewsBox />
 </div>
 </template>
 
@@ -21,6 +23,8 @@ import ExploreBanner from '@/components/ExploreBanner/ExploreBanner.vue'
 import Carousel from '@/components/Carousel/Carousel.vue'
 import OverlappingImages from '@/components/OverlappingImages/OverlappingImages.vue'
 import OverlappingImagesL from '@/components/OverlappingImagesL/OverlappingImagesL.vue'
+import ImagePage from '@/components/ImagePage/ImagePage.vue'
+import NewsBox from '@/components/NewsBox/NewsBox.vue'
 
 @Options({
     components: {
@@ -31,7 +35,9 @@ import OverlappingImagesL from '@/components/OverlappingImagesL/OverlappingImage
         ExploreBanner,
         Carousel,
         OverlappingImages,
-        OverlappingImagesL
+        OverlappingImagesL,
+        ImagePage,
+        NewsBox
     }
 })
 export default class CompTest extends Vue {

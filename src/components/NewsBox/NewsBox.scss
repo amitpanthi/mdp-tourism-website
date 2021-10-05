@@ -1,0 +1,68 @@
+@import "../../assets/_global-styles.scss";
+
+.ng-wrapper{
+    background-color: #fff;
+    margin-top: -5%;
+}
+
+.news-grid{
+    // height: 90vh;
+    height: fit-content;
+    width: 80%;
+    margin: auto;
+    background-color: #fff;
+}
+
+.news-title{
+    font-family: $galleryFont;
+    font-size: 2.25rem;
+    text-align: left;
+    padding-top: 5%
+}
+
+.main-n-grid{
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10vw;
+    text-align: left;
+}
+
+.press-item{
+    .press-item-header{
+        font-family: $Montserrat;
+        font-size: 1.5rem;
+    }
+
+    .press-item-desc{
+        font-family: $defaultFont;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .article-btn{
+        border: 0.5px solid black;
+        font-family: $defaultFont;
+        font-size: 1rem;
+        padding: 3% 12%;
+        margin-top: 5%;
+        background: none;
+    }
+}
+
+.press-nav{
+    @include createFlex(row);
+    justify-content: center;
+    align-items: center;
+
+    p{
+        padding: 0 2%;
+    }
+
+    svg{
+        cursor: pointer;
+    }
+
+    padding-bottom: 5%;
+}
